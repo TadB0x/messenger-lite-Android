@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.MessengerLite" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <item name="colorPrimary">#7C4DFF</item>
+        <item name="colorPrimaryDark">#5E35B1</item>
+        <item name="colorAccent">#7C4DFF</item>
+        <item name="android:windowBackground">#121212</item>
+        <item name="android:statusBarColor">#0D0D0D</item>
+        <item name="android:navigationBarColor">#0D0D0D</item>
+        <item name="actionBarStyle">@style/MessengerActionBar</item>
+    </style>
+
+    <style name="MessengerActionBar" parent="Widget.MaterialComponents.ActionBar.Solid">
+        <item name="background">@color/actionbar_bg</item>
+        <item name="titleTextColor">#FFFFFF</item>
+        <item name="subtitleTextColor">#99FFFFFF</item>
+    </style>
+</resources>
