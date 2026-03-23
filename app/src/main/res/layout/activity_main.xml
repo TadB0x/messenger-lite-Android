@@ -2,12 +2,78 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FF121212">
+    android:background="#FF09090B">
 
+    <!-- Server Setup Screen -->
+    <LinearLayout
+        android:id="@+id/setupScreen"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="32dp"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Messenger Lite"
+            android:textColor="#FAFAFA"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Enter your server URL to get started"
+            android:textColor="#71717A"
+            android:textSize="14sp"
+            android:layout_marginBottom="32dp" />
+
+        <EditText
+            android:id="@+id/serverUrlInput"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:background="@drawable/input_bg"
+            android:hint="https://example.com/messenger"
+            android:textColor="#FAFAFA"
+            android:textColorHint="#52525B"
+            android:textSize="15sp"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:inputType="textUri"
+            android:singleLine="true"
+            android:imeOptions="actionGo"
+            android:layout_marginBottom="16dp" />
+
+        <TextView
+            android:id="@+id/setupError"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#EF4444"
+            android:textSize="13sp"
+            android:visibility="gone"
+            android:layout_marginBottom="8dp" />
+
+        <android.widget.Button
+            android:id="@+id/connectBtn"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@drawable/button_bg"
+            android:text="Connect"
+            android:textColor="#FAFAFA"
+            android:textSize="15sp"
+            android:textAllCaps="false" />
+
+    </LinearLayout>
+
+    <!-- WebView (chat) -->
     <WebView
         android:id="@+id/webview"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        android:visibility="gone" />
 
     <ProgressBar
         android:id="@+id/progress"
@@ -16,7 +82,7 @@
         android:layout_height="4dp"
         android:layout_gravity="top"
         android:max="100"
-        android:progressTint="#FF7C4DFF"
+        android:progressTint="#FF7C3AED"
         android:progressBackgroundTint="#33FFFFFF"
         android:visibility="gone" />
 
